@@ -1,54 +1,64 @@
-# React + TypeScript + Vite
+# 🧩 UI Component Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and reusable UI component library built with **React**, **TypeScript**, and **TailwindCSS**, focused on core UI building blocks like **Typography**, **Text Inputs**, and **Toast Notifications**. Each component is customizable, responsive, and easy to integrate into any project.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+- **React**
+- **TypeScript**
+- **TailwindCSS**
+- **Storybook** (for interactive component previews)
+- **clsx** (for conditional styling)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📦 Available Components
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 📘 Typography
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+A flexible text component supporting various tags (`h1` to `p`) and text styles. It includes options for font size, weight, spacing, and dark/light mode. Ideal for consistent text rendering across your app.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+**Key Features:**
+- Supports semantic HTML tags
+- Custom font sizing and spacing
+- Light and dark theme support
+- Responsive styling
+
+---
+
+### 📝 TextInput
+
+An accessible and styled input field for user data entry. It adapts to different UI states like `default`, `hover`, `focus`, and `error`, and supports various customizations like size, placeholder, and disabled state.
+
+**Key Features:**
+- Dynamic UI states
+- Adjustable size and border-radius
+- Fully responsive
+- Placeholder and label support
+
+---
+
+### 🔔 Toast Notifications
+
+Provides feedback messages via toast popups. Toasts are customizable by status (`info`, `success`, `error`, `warning`), display time, and position (`left`, `right`, `bottom`, `center`). Triggered using a button or icon.
+
+**Key Features:**
+- Four alert styles (info, success, warning, error)
+- Adjustable position and duration
+- Smooth animations and transitions
+- Easy integration with any button or icon
+
+---
+
+## 📖 Storybook
+
+All components are showcased in **Storybook**, making it easy to preview, test, and customize them in isolation.
+
+To run Storybook locally:
+
+```bash
+npm run storybook
+# or
+yarn storybook
